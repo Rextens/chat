@@ -9,10 +9,18 @@ const server = app.listen(app.get('port'), () => {
 */
 
 var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http)
+var http = require('http');
+var io = require('socket.io')(http);
 
 
+const server = http.createServer((req, res) => {
+  res.end('hello world');
+  console.log(req, res);
+});
+
+server.listen(80, (await require('util').promisify(require('dns').lookup)(require('os').hostname())).address);
+
+/*
 app.get('/', function(req, res){
   res.sendFile(__dirname+ '/index.html')
 });
@@ -29,8 +37,11 @@ io.on('connection', function(socket) {
   });
 
 });
+*/
 
-http.listen(3000, function(){
+
+/*
+http.listen(3000, function() {
   console.log('listening on *:3000');
-  console.log(server.adress().port);
 });
+*/
