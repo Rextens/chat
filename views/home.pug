@@ -1,0 +1,20 @@
+html
+    head
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsterrat:300,400,500,700")
+        link(rel="stylesheet" href="/css/main.css")
+    
+    body
+        .wrapper
+            if(formMessage.length)
+            .lightbox(v-show="showFeedback")
+                .lightbox_conent    
+                    h2.lightbox_header #{formMessage}
+                    .lightbox_actions.lightbox_actions--centered
+                        button.btn.btn--primary(@click="closeFeedbackLightbox") Close
+            nav
+                a(href="/views/subpage") Be a hero, adopt a dog.
+        form(method="POST" action="/views/subpage")
+            label(for="testInput") testInput:
+            input(type="text" name="testInput")
+
+        
