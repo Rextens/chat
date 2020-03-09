@@ -8,18 +8,34 @@ const server = app.listen(app.get('port'), () => {
 });
 */
 
-var app = require('express')();
-var http = require('http');
-var io = require('socket.io')(http);
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const flash = require('connect-flash');
+const routes = require('./routes/index');
+const session = require('express-session');
+const http = require('http')
+const util = require('util');
+const dns = require('dns');
+const os = require('os');
 
 
-const server = http.createServer((req, res) => {
-  res.end('hello world');
-  console.log(req, res);
-});
+var server = http.createServer((function(request, response) {
+    response.writeHead(200, {"Content-type": "text/plain"});
 
-server.listen(80, (await require('util').promisify(require('dns').lookup)(require('os').hostname())).address);
+    response.end("Hello world\n");
+}));
 
+async function main()
+{
+  let serverAddress = (await util.promisify(dns.lookup)(os.hostname())).address;
+  console.log('Listening on: ' + serverAddress);
+
+  server.listen(80, serverAddress);
+}
+
+main();
 /*
 app.get('/', function(req, res){
   res.sendFile(__dirname+ '/index.html')
