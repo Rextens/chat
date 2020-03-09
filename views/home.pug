@@ -5,12 +5,6 @@ html
     
     body
         .wrapper
-            if(formMessage.length)
-            .lightbox(v-show="showFeedback")
-                .lightbox_conent    
-                    h2.lightbox_header #{formMessage}
-                    .lightbox_actions.lightbox_actions--centered
-                        button.btn.btn--primary(@click="closeFeedbackLightbox") Close
             nav
                 a(href="/views/subpage") Be a hero, adopt a dog.
         form(method="POST" action="/views/subpage")

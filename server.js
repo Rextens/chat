@@ -1,10 +1,21 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const flash = require('connect-flash');
-const routes = require('./routes/index');
-const session = require('express-session');
+const http = require('http')
+const util = require('util');
+const dns = require('dns');
+const os = require('os');
+const app = require('./app');
 
-var serverMain = require('./serverMain');
+var server = http.createServer((function(request, response) {
+    response.writeHead(200, {"Content-type": "text/plain"});
 
+    response.end("Hello world\n");
+}));
+
+async function main()
+{
+  let serverAddress = (await util.promisify(dns.lookup)(os.hostname())).address;
+  console.log('Listening on: ' + serverAddress);
+
+  app.listen(80, serverAddress);
+}
+
+main();
