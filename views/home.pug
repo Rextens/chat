@@ -1,14 +1,25 @@
 html
     head
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsterrat:300,400,500,700")
         link(rel="stylesheet" href="/css/main.css")
     
-    body
-        .wrapper
-            nav
-                a(href="/views/subpage") Be a hero, adopt a dog.
-        form(method="POST" action="/views/subpage")
-            label(for="testInput") testInput:
-            input(type="text" name="testInput")
+        link(rel="stylesheet" href="/bowerComponents/bootstrap/dist/css/bootstrap.css")
+    body 
+        .container-fluid
+            .row
+                .col-sm-4
+                    img(src="img/kot.jpg" alt="kot" class="img-fluid")
+
+                .col-sm-4
+                    img(src="img/schmitt.jpg" alt="schmitt" class="img-fluid")
+
+                .col-sm-4
+                    img(src="img/stoch.jpg" alt="stoch" class="img-fluid")
+
+        script(src="/bowerComponents/jquery/dist/jquery.js")
+        script(src="/bowerComponents/bootstrap/dist/js/bootstrap.js")
+        
 
         
