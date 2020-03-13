@@ -19,6 +19,13 @@ app.use(bodyParser.urlencoded( { extended: true } ));
 
 app.use(cookieParser());
 
+app.use(session({
+    secret: 'dog hero',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {}
+}));
+
 app.use(flash());
 
 app.use('/', routes);

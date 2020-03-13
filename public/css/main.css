@@ -1,21 +1,35 @@
 body 
 {
-    margin: 0; 
     background: #222; 
-    color: #fafafa;
+    color: #103323;
     /*font-family: 'Monsterrat', sans-serif; */
 }
-.wrapper 
+.box
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    width: 500px;
+    padding: 40px;
+    background: #191919;
+    text-align: center;
 }
-h1 
+.box input[type="text"], .box input[type="passowrd"] 
 {
-    margin: 0;
-    font-weight: normal;
-    /*font-family: 'Bodoni 72', sans-serif; */
-    font-size: 70px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #a30090;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #03c900;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+.box input[type="text"]:focus
+{
+    width: 300px;
+    
+}
+.box input[type="text"]:not(:placeholder-shown) {
+    text-shadow: 0 0 5px #03c900;
 }

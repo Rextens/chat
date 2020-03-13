@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
 
 
 router.get('/', pagesController.home);
-router.post('/views/subpage', applicationsController.store);
+//router.post('/views/subpage', applicationsController.store);
+router.post('/applications', applicationsController.store);
 
 router.get('/views/subpage', pagesController.subPage);
 

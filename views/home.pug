@@ -8,15 +8,13 @@ html
         link(rel="stylesheet" href="/bowerComponents/bootstrap/dist/css/bootstrap.css")
     body 
         .container-fluid
-            .row
-                .col-sm-4
-                    img(src="img/kot.jpg" alt="kot" class="img-fluid")
-
-                .col-sm-4
-                    img(src="img/schmitt.jpg" alt="schmitt" class="img-fluid")
-
-                .col-sm-4
-                    img(src="img/stoch.jpg" alt="stoch" class="img-fluid")
+            .row                                                         
+                .col-sm-12
+                    .row.justify-content-center
+                        form(class="box" action="/applications" method="POST")
+                            input(placeholder="USERNAME" type="text" name="name")    
+                            input(placeholder="PASSWORD" type="text" name="password")
+                            button send it to me
 
         script(src="/bowerComponents/jquery/dist/jquery.js")
         script(src="/bowerComponents/bootstrap/dist/js/bootstrap.js")

@@ -5,3 +5,5 @@ resources
 public/img
 public/bowerComponents
 .bowerrc
+config
+models
