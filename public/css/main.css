@@ -1,17 +1,19 @@
 body 
 {
-    background: #222; 
-    color: #103323;
+    background-color: white; 
     /*font-family: 'Monsterrat', sans-serif; */
 }
+
 .box
 {
-    width: 500px;
-    padding: 40px;
-    background: #191919;
+    width: 100%;
+    height: 100%;
+    background-color: #191919;
     text-align: center;
+    font-family: 'Baloo Chettan 2', cursive;
 }
-.box input[type="text"], .box input[type="passowrd"] 
+
+.box input[type="text"]
 {
     background: none;
     display: block;
@@ -19,17 +21,47 @@ body
     text-align: center;
     border: 2px solid #a30090;
     padding: 14px 10px;
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     outline: none;
     color: #03c900;
     border-radius: 50px;
     transition: 0.2s;
 }
+
 .box input[type="text"]:focus
 {
-    width: 300px;
-    
+    width: 100%;
+    max-width: 300px;
+    border-color: blueviolet; 
 }
+
 .box input[type="text"]:not(:placeholder-shown) {
+    background: none;
+    text-shadow: 0 0 5px #03c900;
+}
+
+.box input[type="submit"]
+{
+    width: 100%;
+    background: none;
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #46003d;
+    padding: 14px 10px;
+    max-width: 150px;
+    outline: none;
+    color: #78bb77;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.box input[type="submit"]:hover
+{
+    width: 100%;
+    max-width: 200px;
+    border-color: #a30090; 
+    color: #03c900;
     text-shadow: 0 0 5px #03c900;
 }

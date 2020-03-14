@@ -1,23 +1,22 @@
+doctype html
 html
-    head
-        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    include basicHead.pug
 
-        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsterrat:300,400,500,700")
-        link(rel="stylesheet" href="/css/main.css")
-    
-        link(rel="stylesheet" href="/bowerComponents/bootstrap/dist/css/bootstrap.css")
-    body 
-        .container-fluid
-            .row                                                         
-                .col-sm-12
-                    .row.justify-content-center
-                        form(class="box" action="/applications" method="POST")
+    link(href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet")
+
+    body    
+        .container-fluid 
+            .row                                                       
+                .col-sm-6.col-lg-3
+                    form(class="box" action="/applications" method="POST")
+                        div(class="form-group")
                             input(placeholder="USERNAME" type="text" name="name")    
                             input(placeholder="PASSWORD" type="text" name="password")
-                            button send it to me
+                            input(type="submit", value="LOGIN") 
 
         script(src="/bowerComponents/jquery/dist/jquery.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
         script(src="/bowerComponents/bootstrap/dist/js/bootstrap.js")
-        
+            
 
         
