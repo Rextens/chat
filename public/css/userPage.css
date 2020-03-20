@@ -1,0 +1,12 @@
+.collumn
+{
+    max-width: 1000px;
+}
+#userData, tr, td
+{
+    border: 1px solid red;
+}
+#userData td
+{
+    color: rebeccapurple;
+}

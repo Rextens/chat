@@ -1,0 +1,35 @@
+doctype html
+html
+    include basicHead.pug
+    link(rel="stylesheet" href="/css/configureProfile.css")
+    link(rel="stylesheet" href="/icons/css/fontello.css")
+
+    body
+        .container-fluid
+            .row
+                .col-12
+                    .topBar
+                        ol
+                            li='Page theme'
+                                ul
+                                    li='test3'
+                            li='test1'                               
+                            li='test2'
+                            li='test1'                               
+                            li='test2'
+                            li='test1'                               
+                            li='test2'
+                                                           
+            .row
+                .col-lg-10
+
+                .col-lg-2
+                    .overlay
+                        img(src="/img/NoProfile.png")
+                        i(class="icon-search")
+
+                    h1=userID       
+
+        script(src="/bowerComponents/jquery/dist/jquery.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
+        script(src="/bowerComponents/bootstrap/dist/js/bootstrap.js")

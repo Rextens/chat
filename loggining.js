@@ -1,0 +1,2 @@
+global.sessionID = [];
+global.computerIP = [];

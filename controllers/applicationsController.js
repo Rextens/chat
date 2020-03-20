@@ -1,11 +1,11 @@
-const Application = require('../models/application');
-
+var Application = require('../models/application');
+const Loggining = require('../loggining');
 
 
 exports.store = (req, res) => {
     
     Application.read({
-        'name': req.body.name,
+        'name': req.body.name
     }).then(function(results) {
 
         if(results == null)
@@ -14,9 +14,26 @@ exports.store = (req, res) => {
         }
         else
         {
-            res.redirect('/users/' + req.body.name);
-            console.log(results.get('password'));
+            if(req.body.password == results.get('password'))
+            {
+                res.redirect('/users/' + req.body.name);
+                
+                if(computerIP.indexOf(req.connection.remoteAddress) == -1)
+                {
+                    sessionID.push(results.get('id'));
+                    computerIP.push(req.connection.remoteAddress);
+                }
+                else
+                {
+                    sessionID[computerIP.indexOf(req.connection.remoteAddress)] = results.get('id');
+                }
+                console.log(computerIP.length);
+            }
+            else
+            {
+                res.redirect('/');
+                console.log('wrong password OwO');
+            }
         }
-    })
-    
+    })   
 };
