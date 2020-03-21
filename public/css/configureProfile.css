@@ -17,6 +17,16 @@
     transition: 0.2s;
 }
 
+#test1234
+{
+    position: relative;
+}
+
+.test123
+{
+    padding-left: 150px;
+}
+
 .overlay i:hover
 {
     opacity: 75%;
@@ -28,56 +38,82 @@ img
     max-height:auto;
 }
 
-.topBar
+#topBar
 {
-    width: 100%;
     background-color: rgb(36, 36, 36);
-    text-align: center;
 }
 
-.topBar ol
+#topBar ol > li > a
 {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    height: 50px;
-    line-height: 200%;
-}
-.topBar ol > li
-{
-    float: left;
-    width: 150px;
-    height: 50px;
-    border-right: 5px solid rgb(206, 206, 206);
     color: #00ff73;
 }
 
-.topBar ol > li:hover
+.dropdown-item
 {
-    text-shadow: 0px 0px 5px #00ff73;
-    box-shadow: 0px 0px 10px 0px rgb(236, 236, 236);
+    font-family: 'Baloo Chettan 2', cursive;
+    list-style: none;
+    color: #00ff73;
+    position: relative;
+    padding: 10px 0px;
+    border-bottom: 1px solid #00ff0d59;
+    font-size: 18px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.dropdown-item:hover
+{
+    color: rgb(0, 255, 34);
 }
 
-.topBar ol > li:hover > ul
+.dropdown-menu label input
 {
+    opacity: 0;
+}
+
+.dropdown-menu label .check
+{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: black;
     display: block;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.dropdown-menu label .check:before
+{
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
+    background-color: rgb(14, 14, 14);
+    border-radius: 2px;
+    transition: 0.5s;
+    transform: translateX(140px);
 }
 
-.topBar ol > li:first-child
+.dropdown-menu label input:checked ~ .check:before
 {
-    border-left: 5px solid rgb(206, 206, 206);
-} 
-
-.topBar ol > li > ul
-{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 50px;
-    display: none;
+    background-color: rgb(9, 255, 0);
+    box-shadow: 0 0 15px rgb(9, 255, 0);
+    transform: translateX(0px);
 }
-.topBar ol > li > ul > li
+
+.dropdown-menu
 {
     background-color: rgb(36, 36, 36);
-    position: relative;
+    padding: 10px 20px;
+    width: 200px;
+}
+.dropdown-item:hover
+{
+    background-color: rgb(36, 36, 36);
+}
+.dropdown-item:last-child
+{
+    border-bottom: none;
 }

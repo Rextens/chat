@@ -3,23 +3,50 @@ html
     include basicHead.pug
     link(rel="stylesheet" href="/css/userPage.css")
 
-    body 
+    body
+        nav(class="navbar navbar-expand-md fixed-top" id="topBar")
+            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBar" aria-controls="navigationBar" aria-expanded="false")
+                span(class="navbar-toggler-icon")
+            .collapse.navbar-collapse#navigationBar
+                ol(class="navbar-nav flex-column")  
+                    li(class="nav-item")
+                        a(class="nav-link" href="#")="configure profile"
+                    li(class="nav-item")
+                        a(class="nav-link" href="#")="2"
+                    li(class="nav-item")
+                        a(class="nav-link" href="#")="3"
+                    li(class="nav-item")
+                        a(class="nav-link" href="#")="4"
+
         .container-fluid
             .row
-                .col-sm-12.col-lg-5.collumn
+                .col-lg-1.col-2
+                .col-9
                     h1=username
-                .col-sm-12.col-lg-5.collumn
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
+                    h1=username
                     
-                .col-sm-12.col-lg-2.collumn
-                    profileImage
-
-                    table(id='userData')
-                        tr
-                            td Username
-                            td=username
-                        tr
-                            td ID
-                            td=id
 
         script(src="/bowerComponents/jquery/dist/jquery.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
