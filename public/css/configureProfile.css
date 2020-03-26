@@ -17,6 +17,11 @@
     transition: 0.2s;
 }
 
+.dropdown-item
+{
+    z-index: 100;
+}
+
 #test1234
 {
     position: relative;
@@ -24,18 +29,48 @@
 
 .test123
 {
-    padding-left: 150px;
+    z-index: 999;
+}
+
+@media (min-width: 991.98px)
+{
+    .optionBar
+    {
+        padding-left: 150px;
+    }
 }
 
 .overlay i:hover
 {
     opacity: 75%;
 }
-
-img 
+.overlay
 {
-    max-width:100%;
-    max-height:auto;
+    width: 200px;
+    height: 200px;
+}
+
+#search-icon-overlay
+{
+    z-index: 999;
+}
+
+#search-icon-overlay:hover ~ #set-profile-image 
+{
+    transform: scale(1.1);
+}
+
+#set-profile-image 
+{
+    max-width: 100%;
+    max-height: auto;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+#set-profile-image:hover 
+{
+    transform: scale(1.1);
 }
 
 #topBar

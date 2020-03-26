@@ -4,24 +4,27 @@ html
     link(rel="stylesheet" href="/css/userPage.css")
 
     body
-        nav(class="navbar navbar-expand-md fixed-top" id="topBar")
-            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBar" aria-controls="navigationBar" aria-expanded="false")
-                span(class="navbar-toggler-icon")
-            .collapse.navbar-collapse#navigationBar
-                ol(class="navbar-nav flex-column")  
-                    li(class="nav-item")
-                        a(class="nav-link" href="#")="configure profile"
-                    li(class="nav-item")
-                        a(class="nav-link" href="#")="2"
-                    li(class="nav-item")
-                        a(class="nav-link" href="#")="3"
-                    li(class="nav-item")
-                        a(class="nav-link" href="#")="4"
-
-        .container-fluid
+        .container-fluid                    
             .row
-                .col-lg-1.col-2
-                .col-9
+                .col-12
+                    header
+                        nav(class="navbar navbar-expand-md" id="topBar")
+                            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBar" aria-controls="configuremenu" aria-expanded="false")
+                                span(class="navbar-toggler-icon")="toggle me"                   
+                .col-3
+                    .row
+                        nav(class="navbar navbar-expand-md navbar-default fixed-top" id="navigation")            
+                            .collapse.navbar-collapse#navigationBar
+                                ol(class="navbar-nav flex-column" id="navigation-list")  
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="/configureProfile")="configure profile"
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="#")="2"
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="#")="3"
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="#")="4"
+                .col-lg-4
                     h1=username
                     h1=username
                     h1=username
@@ -46,6 +49,25 @@ html
                     h1=username
                     h1=username
                     h1=username
+                .col-lg-5
+                    table(id="playerStatistics")
+                        thead
+                            tr
+                                th(colspan=2)=username
+                        tbody
+                            tr
+                                td
+                                    table(id="subTable")
+                                        tr
+                                            td="0/0"
+                                            td="1/0"
+                                        tr
+                                            td="0/1"
+                                            td="1/1"
+                            
+                        tfoot
+                            tr
+                                td(colspan=2)="something"
                     
 
         script(src="/bowerComponents/jquery/dist/jquery.js")

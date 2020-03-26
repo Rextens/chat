@@ -9,73 +9,77 @@ html
 
     body(onLoad="keepToggleOpen()")
 
-        header
-            div(class="navbar navbar-expand-md" id="topBar")
-                button(class="navbar-toggler dropdown-toggle" type="button" data-toggle="collapse" data-target="#configuremenu" aria-controls="configuremenu" aria-expanded="false")
-                    span(class="navbar-toggler-icon")="toggle"
-                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBar" aria-controls="configuremenu" aria-expanded="false")
-                    span(class="navbar-toggler-icon")="toggle me"
-                .collapse.navbar-collapse#configuremenu
-                    ol(class="navbar-nav test123")  
-                        li(class="nav-item dropdown")
-                            a(class="nav-link dropdown-toggle" href="#" data-toggle="dropdown")="hiper-test"
-                            .dropdown-menu.keep-open
-                                label(class="dropdown-item" href="#")="test1"
-                                    input(type="checkbox")
-                                    span(class="check")
-                                label(class="dropdown-item" href="#")="test2"
-                                    input(type="checkbox")
-                                    span(class="check")
-                                label(class="dropdown-item" href="#")="test3"
-                                    input(type="checkbox")
-                                    span(class="check")
-                                label(class="dropdown-item" href="#")="test4"
-                                    input(type="checkbox")
-                                    span(class="check")
-                        li(class="nav-item dropdown")
-                            a(class="nav-link dropdown-toggle" href="#" data-toggle="dropdown")="hiper-test-2" 
-                            .dropdown-menu.keep-open
-                                label(class="dropdown-item" href="#")="test1"
-                                    input(type="checkbox")
-                                    span(class="check")   
-                                a(class="dropdown-item" href="#")="test2"
-                                a(class="dropdown-item" href="#")="test3"
-                                a(class="dropdown-item" href="#")="test4"
-                        li(class="nav-item dropdown")
-                            a(class="nav-link dropdown-toggle" href="#" data-toggle="dropdown")="hiper-test-3"
-                            .dropdown-menu.keep-open
-                                label(class="dropdown-item" href="#")="test1"
-                                    input(type="checkbox")
-                                    span(class="check")   
-                                a(class="dropdown-item" href="#")="test2"
-                                a(class="dropdown-item" href="#")="test3"
-                                a(class="dropdown-item" href="#")="test4"    
-
-                        li(class="nav-item")='test1'                               
-                        li(class="nav-item")='test2'
-                        li(class="nav-item")='test1'                               
-                        li(class="nav-item")='test2'
-
         .container-fluid                    
             .row
+                .col-12
+                    header
+                        nav(class="navbar navbar-expand-md" id="topBar")
+                            button(class="navbar-toggler dropdown-toggle" type="button" data-toggle="collapse" data-target="#configuremenu" aria-controls="configuremenu" aria-expanded="false")
+                                span(class="navbar-toggler-icon")="toggle"
+                            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBar" aria-controls="configuremenu" aria-expanded="false")
+                                span(class="navbar-toggler-icon")="toggle me"
+                            .collapse.navbar-collapse#configuremenu
+                                ol(class="navbar-nav optionBar")  
+                                    li(class="nav-item dropdown")
+                                        a(class="nav-link dropdown-toggle" href="#" data-toggle="dropdown")="hiper-test"
+                                        .dropdown-menu.keep-open
+                                            label(class="dropdown-item" href="#")="test1"
+                                                input(type="checkbox")
+                                                span(class="check")
+                                            label(class="dropdown-item" href="#")="test2"
+                                                input(type="checkbox")
+                                                span(class="check")
+                                            label(class="dropdown-item" href="#")="test3"
+                                                input(type="checkbox")
+                                                span(class="check")
+                                            label(class="dropdown-item" href="#")="test4"
+                                                input(type="checkbox")
+                                                span(class="check")
+                                    li(class="nav-item dropdown")
+                                        a(class="nav-link dropdown-toggle" href="#" data-toggle="dropdown")="hiper-test-2" 
+                                        .dropdown-menu.keep-open
+                                            label(class="dropdown-item" href="#")="test1"
+                                                input(type="checkbox")
+                                                span(class="check")   
+                                            a(class="dropdown-item" href="#")="test2"
+                                            a(class="dropdown-item" href="#")="test3"
+                                            a(class="dropdown-item" href="#")="test4"
+                                    li(class="nav-item dropdown")
+                                        a(class="nav-link dropdown-toggle" href="#" data-toggle="dropdown")="hiper-test-3"
+                                        .dropdown-menu.keep-open
+                                            label(class="dropdown-item" href="#")="test1"
+                                                input(type="checkbox")
+                                                span(class="check")   
+                                            a(class="dropdown-item" href="#")="test2"
+                                            a(class="dropdown-item" href="#")="test3"
+                                            a(class="dropdown-item" href="#")="test4"    
+
+                                    li(class="nav-item")='test1'                               
+                                    li(class="nav-item")='test2'
+                                    li(class="nav-item")='test1'                               
+                                    li(class="nav-item")='test2'                   
                 .col-3
-                    nav(class="navbar navbar-expand-md navbar-default fixed-top" id="test1234")            
-                        .collapse.navbar-collapse#navigationBar
-                            ol(class="navbar-nav flex-column" id="navigation-list")  
-                                li(class="nav-item")
-                                    a(class="nav-link" href="#")="configure profile"
-                                li(class="nav-item")
-                                    a(class="nav-link" href="#")="2"
-                                li(class="nav-item")
-                                    a(class="nav-link" href="#")="3"
-                                li(class="nav-item")
-                                    a(class="nav-link" href="#")="4"
+                    .row
+                        nav(class="navbar navbar-expand-md navbar-default fixed-top" id="test1234")            
+                            .collapse.navbar-collapse#navigationBar
+                                ol(class="navbar-nav flex-column" id="navigation-list")  
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="#configureProfile")="configure profile"
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="#")="2"
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="#")="3"
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="#")="4"
                 .col-lg-7
-                    h1=userID
+                        h1=userID
                 .col-lg-2
-                    .overlay
-                        img(src="/img/NoProfile.png")
-                        i(class="icon-search")       
+                        .overlay
+                            i(class="icon-search" id="search-icon-overlay")
+                            img(src="/img/NoProfile.png" id="set-profile-image")
+                            
+                            
+                                   
        
             
         script(src="/bowerComponents/jquery/dist/jquery.js")

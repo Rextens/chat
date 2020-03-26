@@ -2,11 +2,28 @@
 {
     max-width: 1000px;
 }
-#userData, tr, td
+
+#topBar
+{
+    background-color: rgb(36, 36, 36);
+    height: 100px;
+}
+
+
+#navigation
+{
+    position: relative;
+}
+
+#playerStatistics, #playerStatistics td, #playerStatistics th
+{
+    border: 1px solid purple;
+    z-index: 1;
+}
+
+#subTable tr td
 {
     border: 1px solid red;
+    z-index: 1;
 }
-#userData td
-{
-    color: rebeccapurple;
-}
+
