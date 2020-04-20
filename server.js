@@ -4,6 +4,7 @@ const dns = require('dns');
 const os = require('os');
 const app = require('./app');
 
+/*
 var server = http.createServer((function(request, response) {
     response.writeHead(200, {"Content-type": "text/plain"});
 
@@ -17,5 +18,10 @@ async function main()
 
   app.listen(80, serverAddress);
 }
+*/
 
-main();
+app.set('port', process.env.PORT || 8080);
+
+const server = app.listen(app.get('port'), () => {
+  console.log(`Listening on ${ server.address().port }`);
+})
