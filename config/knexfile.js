@@ -1,8 +1,8 @@
 module.exports = {
     client: 'mysql2',
     connection: {
-        user: 'root',
-        password: 'ReXiO1pl!',
-        database: 'testdatabase'
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME
     }
 }
