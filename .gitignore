@@ -1,7 +1,2 @@
 node_modules
-resources
-public/img
-public/bowerComponents
 .bowerrc
-config
-models
