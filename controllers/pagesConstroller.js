@@ -7,5 +7,7 @@ exports.subPage = (req, res) => {
 }
 
 exports.register = (req, res) => {
-    res.render('register');
+    res.render('register', {
+        formMessage: req.flash('form')
+    });
 }

@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
 
 router.get('/', pagesController.home);
 router.post('/applications', applicationsController.store);
+router.post('/addUser', applicationsController.addUser);
 
 router.get('/views/subpage', pagesController.subPage);
 router.get('/views/register', pagesController.register);

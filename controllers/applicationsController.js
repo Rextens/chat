@@ -3,7 +3,7 @@ const Loggining = require('../loggining');
 
 
 exports.store = (req, res) => {
-    
+    /***************************************************************/
     Application.read({
         'name': req.body.name
     }).then(function(results) {
@@ -32,8 +32,33 @@ exports.store = (req, res) => {
             else
             {
                 res.redirect('/');
-                console.log('wrong password OwO');
+                console.log('OwO wrong password');
             }
         }
     })   
 };
+
+exports.addUser = (req, res) => {
+
+    Application.read({
+        'name': req.body.name
+    }).then(function(results){
+
+        if(results == null)
+        {
+            Application.create({
+                'name': req.body.name,
+                'email': req.body.email,
+                'password': req.body.password,
+                'commitPassoword': req.body.commitPassoword
+            }).then(function() {       
+                res.redirect('/users/' + req.body.name);
+            })
+        }
+        else
+        {
+            req.flash('form', 'Taki użytkownik już istnieje');
+            res.redirect('/register');        
+        }
+    })
+}
