@@ -17,7 +17,7 @@ router.post('/addUser', applicationsController.addUser);
 router.get('/views/subpage', pagesController.subPage);
 router.get('/views/register', pagesController.register);
 
-router.get('/views/creatures', (req, res) => {
+router.get('/creatures', (req, res) => {
     res.render('creatures', 
     {
         username: usernames[computerIP.indexOf(req.ip)]
