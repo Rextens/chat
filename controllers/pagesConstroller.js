@@ -11,3 +11,11 @@ exports.register = (req, res) => {
         formMessage: req.flash('form')
     });
 }
+
+exports.creatures = (req, res) => {
+    res.render('creatures', {
+        
+    });
+}
+
+

@@ -1,0 +1,28 @@
+doctype html
+html
+    include basicHead.pug
+    link(rel="stylesheet" href="/css/userPage.css")
+
+    body
+        .container-fluid                    
+            .row
+                .col-12
+                    header
+                        nav(class="navbar navbar-expand-md" id="topBar")
+                            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBar" aria-controls="configuremenu" aria-expanded="false")
+                                span(class="navbar-toggler-icon")="toggle me"                   
+                .col-3
+                    .row
+                        nav(class="navbar navbar-expand-md navbar-default fixed-top" id="navigation")            
+                            .collapse.navbar-collapse#navigationBar
+                                ol(class="navbar-nav flex-column" id="navigation-list")  
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="/configureProfile")="Configure Profile"
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="/users/"+username)="My Profile"
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="#")="3"
+                                    li(class="nav-item")
+                                        a(class="nav-link" href="#")="4"
+                .col-lg-7
+                    img(src="upload.wikimedia.org/wikipedia/commons/0/0e/2-creature-design.png")

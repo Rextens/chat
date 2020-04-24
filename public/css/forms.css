@@ -43,7 +43,7 @@ body
     text-shadow: 0 0 5px #03c900;
 }
 
-.box input[type="submit"]
+.box input[type="submit"], button
 {
     width: 100%;
     background: none;
@@ -59,11 +59,16 @@ body
     transition: 0.2s;
 }
 
-.box input[type="submit"]:hover
+.box input[type="submit"]:hover, button:hover
 {
     width: 100%;
     max-width: 200px;
     border-color: #a30090; 
     color: #03c900;
     text-shadow: 0 0 5px #03c900;
+}
+
+.box a
+{
+    color: #03c900;
 }

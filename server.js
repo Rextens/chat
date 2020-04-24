@@ -21,6 +21,7 @@ async function main()
 */
 
 app.set('port', process.env.PORT || 8080);
+app.set('trust proxy', true);
 
 const server = app.listen(app.get('port'), () => {
   console.log(server.address().address);
