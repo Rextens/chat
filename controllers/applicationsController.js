@@ -46,12 +46,19 @@ exports.addUser = (req, res) => {
 
         if(results == null)
         {
-            Application.create({
-                'name': req.body.name,
-                'password': req.body.password,
-            }).then(function() {       
-                res.redirect('/users/' + req.body.name);
-            })
+            if(req.body.password == req.body.commitPassword)
+            {
+                Application.create({
+                    'name': req.body.name,
+                    'password': req.body.password,
+                }).then(function() {       
+                    res.redirect('/users/' + req.body.name);
+                })
+            }
+            else
+            {
+                res.redirect('/register');
+            }
         }
         else
         {
